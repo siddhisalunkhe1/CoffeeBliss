@@ -21,8 +21,6 @@ Welcome to **Coffee Bliss** — a visually appealing and fully responsive coffee
 ## 📂 Project Structure
 coffee-bliss/
 ├── index.html
-├── style.css (if custom)
-├── /assets
 │ ├── images (menu, testimonials, icons)
 ├── /js
 │ └── script.js
