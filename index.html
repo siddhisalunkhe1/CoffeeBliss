@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+  
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+  
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+  </style>
+  
+</head>
+
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- Header -->
+<header class="bg-gradient-to-r from-[#5a3c2e] to-[#684733] text-white py-5 px-6 shadow-lg fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="text-3xl font-extrabold tracking-wide text-white hover:text-[#f3961c] transition duration-300">
+        ☕ Coffee Bliss
+      </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-lg font-medium">
+        <a href="#" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">Home</a>
+        <a href="#about" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">About</a>
+        <a href="#menu" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">Menu</a>
+        <a href="#testimonial" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">Testimonial</a>
+        <a href="#gallery" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">Gallery</a>
+        <a href="#contact" class="hover:text-[#f3961c] hover:underline underline-offset-4 transition duration-300">Contact</a>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none hover:text-[#f3961c] transition">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-[#684733] text-white py-6 px-6 space-y-4 shadow-md fixed top-20 w-full z-40">
+    <a href="#" class="block hover:text-[#f3961c] text-lg transition">Home</a>
+    <a href="#about" class="block hover:text-[#f3961c] text-lg transition">About</a>
+    <a href="#menu" class="block hover:text-[#f3961c] text-lg transition">Menu</a>
+    <a href="#testimonial" class="block hover:text-[#f3961c] text-lg transition">Testimonial</a>
+    <a href="#gallery" class="block hover:text-[#f3961c] text-lg transition">Gallery</a>
+    <a href="#contact" class="block hover:text-[#f3961c] text-lg transition">Contact</a>
+  </nav>
+  
+
+  <!-- Hero Section -->
+<section class="h-screen flex items-center justify-center bg-gradient-to-br from-[#4b2c20] via-[#8b5e3c] to-[#f3961c] text-white px-4 text-center pt-24">
+    <div>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+        Welcome to <span class="text-white">Coffee Bliss</span>
+      </h1>
+      <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto text-white/90">
+        Discover the aroma and taste of premium handcrafted coffee.
+      </p>
+  
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="#order" class="bg-white text-[#4b2c20] font-semibold py-3 px-8 rounded-full hover:bg-[#f3b564] hover:text-white transition shadow-lg">
+            Order Now
+          </a>          
+        <a href="#contact" class="border-2 border-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-[#4b2c20] transition shadow-lg">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Order Section -->
+<section id="order" class="py-20 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-6 text-[#4b2c20]">Place Your Order</h2>
+      <p class="text-gray-600 mb-10">Choose your favorite coffee and have it ready in no time!</p>
+  
+      <!-- Example Order Button or Form -->
+      <a href="#menu" class="inline-block bg-[#4b2c20] text-white py-3 px-6 rounded-full font-semibold hover:bg-[#f3961c] transition">
+        Browse Menu
+      </a>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">About Us</h2>
+      <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed">
+        We are passionate about delivering the finest coffee experience. Our beans are sourced from the best plantations and brewed to perfection. Every cup tells a story of craftsmanship and dedication.
+      </p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+<section id="menu" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-10">Our Menu</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        
+        <!-- Burger + Fries -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/burger-frenchfries.png" alt="Burger & Fries" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Burger & Fries</h3>
+          <p class="text-gray-600">Juicy burgers paired with crispy golden fries.</p>
+        </div>
+  
+        <!-- Cold Beverages -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/cold-beverages.png" alt="Cold Beverages" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Cold Beverages</h3>
+          <p class="text-gray-600">Chill out with our iced coffees and cold brews.</p>
+        </div>
+  
+        <!-- Desserts -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/desserts.png" alt="Desserts" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Desserts</h3>
+          <p class="text-gray-600">Indulge in sweet strawberry desserts and creamy treats.</p>
+        </div>
+  
+        <!-- Hot Beverages -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/hot-beverages.png" alt="Hot Beverages" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Hot Beverages</h3>
+          <p class="text-gray-600">Savor the warmth of classic coffee and latte art.</p>
+        </div>
+  
+        <!-- Refreshments -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/refreshment.png" alt="Refreshments" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Refreshments</h3>
+          <p class="text-gray-600">Cool down with fruity strawberry splash drinks.</p>
+        </div>
+  
+        <!-- Special Combo -->
+        <div class="bg-white shadow-lg rounded-xl p-4 text-center hover:scale-105 transition duration-300">
+          <img src="images/special-combo.png" alt="Special Combo" class="w-full h-48 object-contain mb-4 mx-auto">
+          <h3 class="text-xl font-semibold mb-2">Special Combo</h3>
+          <p class="text-gray-600">Ultimate meal combo: burgers, hot dogs, fries & a drink.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- testimonials section -->
+  <section id="testimonial" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+          <img src="images/user-4.jpg" alt="Customer 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+          <p class="text-gray-600 italic">"The best burger and coffee I've ever had! The service was excellent too."</p>
+          <h3 class="mt-4 font-semibold text-lg">Rishika</h3>
+        </div>
+  
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+          <img src="images/user-3.jpg" alt="Customer 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+          <p class="text-gray-600 italic">"Awesome ambiance, great food. Highly recommended for hangouts!"</p>
+          <h3 class="mt-4 font-semibold text-lg">Vedang</h3>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+          <img src="images/user-1.jpg" alt="Customer 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+          <p class="text-gray-600 italic">"Super fresh and tasty. I keep coming back every weekend!"</p>
+          <h3 class="mt-4 font-semibold text-lg">Emma</h3>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10">Gallery</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <img src="images/gallery-1.jpg" alt="Gallery 1" class="w-full h-48 object-cover rounded-lg" loading="lazy" />
+        <img src="images/gallery-2.jpg" alt="Gallery 2" class="w-full h-48 object-cover rounded-lg" loading="lazy" />
+        <img src="images/gallery-3.jpg" alt="Gallery 3" class="w-full h-48 object-cover rounded-lg" loading="lazy" />
+        <img src="images/gallery-4.jpg" alt="Gallery 4" class="w-full h-48 object-cover rounded-lg" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-50 py-16">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+      <form class="space-y-8" novalidate>
+        <div>
+          <label for="name" class="block mb-2 font-medium">Name</label>
+          <input id="name" type="text" required placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f3961c] focus:outline-none" />
+        </div>
+        <div>
+          <label for="email" class="block mb-2 font-medium">Email</label>
+          <input id="email" type="email" required placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f3961c] focus:outline-none" />
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-medium">Message</label>
+          <textarea id="message" rows="5" required placeholder="Your Message" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f3961c] focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="bg-[#f3961c] text-white py-3 px-10 rounded-full font-semibold hover:bg-orange-600 transition-shadow shadow-md w-full sm:w-auto">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#684733] text-white text-center py-6">
+    <p>&copy; 2025 Coffee Bliss. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <!-- <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close mobile menu on link click (optional)
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script> -->
+</body>
+
+</html>
