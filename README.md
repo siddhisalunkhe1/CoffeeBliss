@@ -19,10 +19,10 @@ Welcome to **Coffee Bliss** — a visually appealing and fully responsive coffee
 - 💡 JavaScript (Vanilla)
 
 ## 📂 Project Structure
-coffee-bliss/
+coffee-bliss
 ├── index.html
-│ ├── images (menu, testimonials, icons)
+├── images (menu, testimonials, icons)
 ├── /js
-│ └── script.js
+│    └── script.js
 
 🔗 Live Demo :https://coffeebliss-ruby.vercel.app/
