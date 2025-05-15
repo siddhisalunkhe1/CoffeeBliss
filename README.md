@@ -18,11 +18,5 @@ Welcome to **Coffee Bliss** — a visually appealing and fully responsive coffee
 - 🎨 Tailwind CSS  
 - 💡 JavaScript (Vanilla)
 
-## 📂 Project Structure
-coffee-bliss
-├── index.html
-├── images (menu, testimonials, icons)
-├── /js
-│    └── script.js
 
 🔗 Live Demo :https://coffeebliss-ruby.vercel.app/
